@@ -1,0 +1,44 @@
+.taxi-navbar {
+  background: #ffc400;
+  padding: 8px 0px !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* LOGO AREA */
+.taxi-logo {
+  font-weight: 700;
+  color: #111 !important;
+  gap: 10px;
+}
+
+/* LOGO IMAGE */
+.logo-img {
+  height: 42px;      /* perfect header size */
+  width: auto;
+}
+
+.nav-link {
+  margin-left: 22px;
+  font-weight: 500;
+  color: #111 !important;
+  transition: all 0.5s ease;
+}
+
+.nav-link:hover {
+  color: white !important;
+  transform: translateY(-2px);
+}
+
+/* Book Button */
+.book-btn {
+  background-color: #1A1A1A !important;
+  color: #fff !important;
+  padding: 6px 16px;
+  border: 1px solid black !important;
+  border-radius: 6px;
+}
+
+.book-btn:hover {
+  background: #E0A800 !important;
+  color: black !important;
+}

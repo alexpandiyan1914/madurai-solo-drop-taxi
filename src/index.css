@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f9f9f9;
+  color: #222;
+}
+
+section {
+  padding: 50px 40px;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+h1, h2, h3, .logo-text, .nav-link {
+  font-family: 'Poppins', sans-serif;
+}
