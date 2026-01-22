@@ -10,7 +10,7 @@ const tariffData = [
   {
     id: "sedan",
     vehicle: "Sedan",
-    price: "₹14 / km",
+    price: "₹14 per km",
     image: sedanImg,
     highlights: ["Good for 1-3 passengers", "AC: Yes", "Luggage: 1 large + 1 small"],
     description:
