@@ -253,3 +253,127 @@
     font-size: 0.95rem;
   }
 }
+
+/* ============================= */
+/*   TAXI BRAND – TARIFF TABLE   */
+/* ============================= */
+
+.tariff-table-wrapper {
+  margin-top: 1px;
+  padding: 3rem 2rem;
+  border-radius: 22px;
+
+  background: linear-gradient(
+    145deg,
+    #0c0c0c,
+    #000000
+  );
+
+  box-shadow:
+    0 30px 70px rgba(0, 0, 0, 0.8),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+/* Title */
+.table-title {
+  color: #ffc400; /* TAXI YELLOW */
+  font-weight: 700;
+  font-size: 2.2rem;
+  letter-spacing: 0.6px;
+}
+
+/* Table */
+.tariff-table {
+  margin-top: 2.2rem;
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  background: transparent;
+  color: #ffffff;
+}
+
+/* Header */
+.tariff-table thead th {
+  background: #111111;
+  color: #ffc400;
+  font-weight: 600;
+  padding: 1.4rem;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  font-size: 0.95rem;
+}
+
+.tariff-table thead th:first-child {
+  border-top-left-radius: 16px;
+}
+
+.tariff-table thead th:last-child {
+  border-top-right-radius: 16px;
+}
+
+/* Rows */
+.tariff-table tbody tr {
+  background: rgba(255, 255, 255, 0.03);
+  transition: background 0.25s ease, transform 0.2s ease;
+}
+
+.tariff-table tbody tr:hover {
+  background: rgba(255, 196, 0, 0.08);
+  transform: scale(1.01);
+
+}
+
+/* Left labels */
+.tariff-table .row-title {
+  background: linear-gradient(
+    135deg,
+    #ffc400,
+    #0f0f0f
+  );
+  color: #ffffff;
+  font-weight: 600;
+  text-align: left;
+  padding: 1.4rem 1.8rem;
+  border: none;
+}
+
+/* Data cells */
+.tariff-table tbody td {
+  padding: 1.3rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  font-size: 0.95rem;
+}
+
+/* Price highlight */
+.tariff-table tbody td:not(.row-title) {
+  color: #ffc400;
+  font-weight: 600;
+}
+
+/* Rounded bottom */
+.tariff-table tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 16px;
+}
+
+.tariff-table tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 16px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .tariff-table-wrapper {
+    padding: 2rem 1rem;
+  }
+
+  .table-title {
+    font-size: 1.8rem;
+  }
+
+  .tariff-table thead th,
+  .tariff-table tbody td {
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+}

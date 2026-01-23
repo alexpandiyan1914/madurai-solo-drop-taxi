@@ -80,7 +80,7 @@ const Tariff = () => {
       ref={sectionRef}
       aria-labelledby="tariff-heading"
     >
-      <div className="container">
+      <div className="container" data-aos="fade-up">
         <div className="text-center mb-5">
           <h2 id="tariff-heading" className="section-title">
             Tariff
@@ -99,9 +99,8 @@ const Tariff = () => {
               style={{ "--card-delay": `${idx * 140}ms` }}
             >
               <div
-                className={`tariff-card ${flipped[item.id] ? "is-flipped" : ""} ${
-                  visible ? "will-animate" : ""
-                }`}
+                className={`tariff-card ${flipped[item.id] ? "is-flipped" : ""} ${visible ? "will-animate" : ""
+                  }`}
                 onClick={() => toggleFlip(item.id)}
                 onKeyDown={(e) => handleKey(e, item.id)}
                 role="button"
@@ -144,6 +143,47 @@ const Tariff = () => {
             </div>
           ))}
         </div>
+        {/* TARIFF TABLE */}
+        <div className="tariff-table-wrapper" data-aos="fade-up">
+          <h3 className="table-title text-center mb-4">Booking Tariff</h3>
+
+          <div className="table-responsive">
+            <table className="table tariff-table text-center align-middle">
+              <thead>
+                <tr>
+                  <th>Types of Vehicles</th>
+                  <th>Sedan</th>
+                  <th>SUV</th>
+                  <th>Innova</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td className="row-title">One Way Drop</td>
+                  <td>₹14 / Km</td>
+                  <td>₹19 / Km</td>
+                  <td>₹19 / Km</td>
+                </tr>
+
+                <tr>
+                  <td className="row-title">Round Way Trip</td>
+                  <td>₹13 / Km</td>
+                  <td>₹18 / Km</td>
+                  <td>₹18 / Km</td>
+                </tr>
+
+                <tr>
+                  <td className="row-title">Driver Bata</td>
+                  <td>₹400</td>
+                  <td>₹400</td>
+                  <td>₹400</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
       </div>
     </section>
   );
