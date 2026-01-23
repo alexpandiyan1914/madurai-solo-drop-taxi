@@ -1,0 +1,98 @@
+/* ===============================
+   BOOKING FORM SECTION
+   =============================== */
+
+.booking-section {
+  padding: 80px 0;
+  background: #0f0f10;
+  color: #ffffff;
+}
+
+/* Card styling */
+.booking-card {
+  background: #141414;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Title */
+.booking-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 24px;
+  color: #ffc107;
+}
+
+/* Labels */
+.booking-card .form-label {
+  color: #dcdcdc;
+  font-weight: 500;
+}
+
+/* Inputs */
+.booking-card .form-control,
+.booking-card .form-select {
+  background-color: #1c1c1c;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  padding: 10px 12px;
+}
+
+.booking-card .form-control::placeholder {
+  color: #9a9a9a;
+}
+
+.booking-card .form-control:focus,
+.booking-card .form-select:focus {
+  background-color: #1c1c1c;
+  color: #ffffff;
+  border-color: #ffc107;
+  box-shadow: none;
+}
+
+/* Fare box */
+.fare-box {
+  background: rgba(255, 193, 7, 0.12);
+  border: 1px dashed rgba(255, 193, 7, 0.5);
+  color: #ffc107;
+  font-weight: 700;
+  text-align: center;
+  padding: 14px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+/* CTA button */
+.booking-btn {
+  background: #25d366; /* WhatsApp green */
+  border: none;
+  font-weight: 600;
+  padding: 14px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.booking-btn:hover {
+  background: #1ebe5d;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .booking-title {
+    font-size: 1.8rem;
+  }
+}
+/* One-time fade-in animation */
+.booking-section {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 600ms ease, transform 600ms ease;
+}
+
+.booking-section.entered {
+  opacity: 1;
+  transform: translateY(0);
+}
