@@ -181,14 +181,14 @@ Estimated Fare: ₹${fare}
                   </div>
 
                   <div className="col-md-6">
-                    <label className="form-label">Distance (optional)</label>
+                    <label className="form-label">Distance (km)</label>
                     <input
                       type="number"
                       className="form-control"
                       name="distance"
                       value={form.distance}
                       onChange={handleChange}
-                      placeholder="Approx distance (km)"
+                      placeholder="Approx distance"
                     />
                   </div>
                 </div>
