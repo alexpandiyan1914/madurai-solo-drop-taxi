@@ -32,7 +32,7 @@ function Header() {
         {/* MENU */}
         <div className="collapse navbar-collapse" id="taxiNav">
           <ul className="navbar-nav ms-auto">
-            {["home", "services", "tariff", "contact", "book"].map((item) => (
+            {["home", "services", "tariff","packages", "contact", "book"].map((item) => (
               <li className="nav-item" key={item}>
                 <a
                   className={`nav-link ${item === "book" ? "book-btn" : ""}`}

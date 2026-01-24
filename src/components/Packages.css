@@ -1,0 +1,68 @@
+.packages-section {
+  background: linear-gradient(
+    180deg,
+    #111 0%,
+    #181818 60%,
+    #111 100%
+  );
+  padding: 5rem 0;
+}
+
+.section-title {
+  color: #ffc400;
+  font-weight: 700;
+}
+
+.section-subtitle {
+  color: #ccc;
+  font-size: 1rem;
+}
+
+.package-card {
+  background: #1f1f1f;
+  border-radius: 18px;
+  padding: 24px;
+  height: 100%;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+  transition: all 0.35s ease;
+  border: 1px solid rgba(255, 196, 0, 0.15);
+}
+
+.package-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 60px rgba(255, 196, 0, 0.25);
+}
+
+.package-card h4 {
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.package-days {
+  display: inline-block;
+  background: #ffc400;
+  color: #000;
+  font-size: 0.85rem;
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+
+.package-info {
+  color: #ddd;
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+}
+
+.package-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 18px;
+}
+
+.package-price {
+  color: #ffc400;
+  font-weight: 600;
+  font-size: 1rem;
+}

@@ -2,6 +2,9 @@ import { useEffect, useRef, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Contact.css";
 
+import logo from "../assets/logo.png";
+import { FaPhoneAlt, FaWhatsapp, FaEnvelope, FaClock, FaMapMarkerAlt } from "react-icons/fa";
+
 function Contact() {
   const [visible, setVisible] = useState(false);
   const sectionRef = useRef(null);
@@ -29,44 +32,64 @@ function Contact() {
       id="contact"
       className={`contact-section ${visible ? "entered" : ""}`}
     >
-      <div className="container">
-        <div className="row gy-4">
-          {/* Brand */}
-          <div className="col-md-4">
-            <h3 className="contact-brand">Madurai Solo Drop Taxi</h3>
-            <p className="contact-text">
+      <div className="container" >
+        <div className="footer-grid">
+
+          {/* BRAND */}
+          <div className="footer-col" data-aos="fade-up" data-aos-delay="100">
+            <div className="footer-brand">
+              <img src={logo} alt="Madurai Solo Drop Taxi" />
+              <h4>Madurai Solo Drop Taxi</h4>
+            </div>
+            <p className="footer-desc">
               Trusted one-way taxi service from Madurai to anywhere in India.
-              Clean cars, professional drivers, and transparent pricing.
+              Clean cars, professional drivers, transparent pricing.
             </p>
           </div>
 
-          {/* Contact Info */}
-          <div className="col-md-4">
-            <h5 className="contact-title">Contact</h5>
-            <ul className="contact-list">
-              <li>📞 +91 81227 46320</li>
-              <li>💬 WhatsApp available</li>
-              <li>📧 support@maduraisolodroptaxi.com</li>
-              <li>🕒 24 / 7 Service</li>
+          {/* CONTACT INFO */}
+          <div className="footer-col" data-aos="fade-up" data-aos-delay="200">
+            <h5 className="footer-title">Contact</h5>
+            <ul className="footer-list">
+              <li><FaPhoneAlt /> +91 81227 46320</li>
+              <li><FaWhatsapp /> WhatsApp Available</li>
+              <li><FaEnvelope /> maduraisolodroptaxi@gmail.com</li>
+              <li><FaClock /> 24 / 7 Service</li>
+              <li><FaMapMarkerAlt /> Madurai, Tamil Nadu</li>
             </ul>
           </div>
 
-          {/* Quick Links */}
-          <div className="col-md-4">
-            <h5 className="contact-title">Quick Links</h5>
-            <ul className="contact-links">
+          {/* QUICK LINKS */}
+          <div className="footer-col" data-aos="fade-up" data-aos-delay="300">
+            <h5 className="footer-title">Quick Links</h5>
+            <ul className="footer-links">
               <li><a href="#home">Home</a></li>
               <li><a href="#services">Services</a></li>
               <li><a href="#tariff">Tariff</a></li>
+              <li><a href="#packages">Packages</a></li>
               <li><a href="#book">Book Taxi</a></li>
             </ul>
           </div>
+
+          {/* MAP */}
+          <div className="footer-col" data-aos="fade-up" data-aos-delay="400">
+            <h5 className="footer-title">Our Location</h5>
+            <div className="map-wrapper">
+              <iframe
+                title="Madurai Solo Drop Taxi Location"
+                src="https://www.google.com/maps?q=Madurai,Tamil%20Nadu&output=embed"
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
+
         </div>
 
-        <hr className="contact-divider" />
 
-        <div className="text-center contact-footer">
-          © {new Date().getFullYear()} Madurai Solo Drop Taxi. All rights reserved.
+        <hr />
+
+        <div className="footer-bottom">
+          © {new Date().getFullYear()} Madurai Solo Drop Taxi · All rights reserved · Powered by Valyrian Coders
         </div>
       </div>
     </footer>
