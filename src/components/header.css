@@ -8,7 +8,7 @@
 .taxi-logo {
   font-weight: 700;
   color: #111 !important;
-  gap: 10px;
+  gap: 6.5px;
 }
 
 /* LOGO IMAGE */
@@ -43,3 +43,47 @@
   color: black !important;
 }
 
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background: #ffc400;
+    padding: 10px 0;
+  }
+
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .navbar-nav .nav-link {
+    margin: 8px 0;
+  }
+
+  .book-btn {
+    display: inline-block;
+    margin-top: 8px;
+  }
+}
+
+@media (max-width: 380px) {
+
+  .container-fluid {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
+  .logo-img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .taxi-logo span {
+    font-size: 0.9rem;
+    max-width: 180px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .navbar-toggler {
+    padding: 4px 6px;
+    size-adjust: 6px;
+  }
+}

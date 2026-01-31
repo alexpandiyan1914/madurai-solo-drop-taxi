@@ -95,7 +95,6 @@ const Tariff = () => {
             <div
               className="col-md-6 col-lg-4"
               key={item.id}
-              // tempo: pass delay via inline style variable so CSS can stagger
               style={{ "--card-delay": `${idx * 140}ms` }}
             >
               <div

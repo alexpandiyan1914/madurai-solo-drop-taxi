@@ -1,4 +1,4 @@
-import Header from "./components/header";
+import Header from "./components/Header";
 import BookingForm from "./components/BookingForm";
 import Services from "./components/Services";
 import Tariff from "./components/Tariff";

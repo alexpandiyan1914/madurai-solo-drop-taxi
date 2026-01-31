@@ -7,11 +7,15 @@
 
 html {
   scroll-behavior: smooth;
+  width: 100%;
+  overflow-x: hidden !important;
 }
 
 body {
   background: #f9f9f9;
   color: #222;
+  width: 100%;
+  overflow-x: hidden !important;
 }
 
 section {
