@@ -140,7 +140,7 @@ function BookingForm() {
 
                 <Input type="date" label="Pickup Date" name="date" value={form.date} error={errors.date} onChange={handleChange} />
                 <Input type="time" label="Pickup Time" name="time" value={form.time} error={errors.time} onChange={handleChange} />
-
+                
                 <div className="col-md-6">
                   <label className="form-label">Vehicle</label>
                   <select className="form-select" name="car" value={form.car} onChange={handleChange}>
@@ -148,6 +148,7 @@ function BookingForm() {
                     <option value="suv">SUV</option>
                     <option value="innova">Innova</option>
                   </select>
+
                 </div>
 
                 <Input label="Distance (optional)" name="distance" value={form.distance} error={errors.distance} onChange={handleChange} />
