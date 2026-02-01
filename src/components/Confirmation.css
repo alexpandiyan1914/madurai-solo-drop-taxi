@@ -1,0 +1,141 @@
+.confirm-section {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #111 40%, #1c1c1c);
+  color: #fff;
+}
+
+.confirm-left {
+  padding: 3rem 2rem;
+}
+
+.brand-box img {
+  width: 60px;
+  margin-bottom: 1rem;
+  margin-left:7.5rem;
+}
+
+.brand-box h2 {
+  font-weight: 800;
+  color: #ffc107;
+  line-height: 1.2;
+}
+
+.subtitle {
+  color: #ccc;
+  margin-top: 0.5rem;
+}
+
+.terms-box {
+  margin-top: 2.5rem;
+  background: #161616;
+  padding: 1.5rem;
+  border-radius: 14px;
+}
+
+.terms-box h5 {
+  color: #ffc107;
+  margin-bottom: 1rem;
+}
+
+.terms-box ul {
+  padding-left: 1rem;
+  font-size: 0.9rem;
+  color: #ddd;
+}
+
+.terms-box li {
+  margin-bottom: 8px;
+}
+
+.terms-check {
+  display: flex;
+  gap: 10px;
+  margin-top: 1.2rem;
+  font-size: 0.9rem;
+}
+
+.terms-check input {
+  accent-color: #ffc107;
+  transform: scale(1.2);
+}
+
+.confirm-card {
+  background: #fff;
+  color: #111;
+  border-radius: 22px;
+  padding: 2.5rem;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.35);
+  margin-top: 20px;
+}
+
+.confirm-card h3 {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.2rem;
+}
+
+.summary-grid div {
+  background: #f8f9fa;
+  padding: 12px 14px;
+  border-radius: 12px;
+}
+
+.summary-grid span {
+  display: block;
+  font-size: 0.75rem;
+  color: #6c757d;
+}
+
+.summary-grid strong {
+  font-size: 0.95rem;
+}
+
+.summary-grid .fare {
+  grid-column: span 2;
+  background: #fff3cd;
+  border: 1px dashed #ffc107;
+}
+
+.confirm-btn {
+  margin-top: 12px;
+  width: 100%;
+  border: none;
+  padding: 14px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #25d366, #1ebe5d);
+  color: #fff;
+  transition: 0.3s;
+}
+
+.confirm-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.confirm-btn:not(:disabled):hover {
+  transform: translateY(-2px);
+}
+
+.note {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #dc3545;
+  margin-top: 2px;
+  margin-bottom: 0px;
+}
+
+.confirm-empty {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+}

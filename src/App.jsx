@@ -1,13 +1,9 @@
-import Header from "./components/Header";
-import BookingForm from "./components/BookingForm";
-import Services from "./components/Services";
-import Tariff from "./components/Tariff";
-import Contact from "./components/Contact";
-import Packages from "./components/Packages"
-import Hero from "./components/Hero"
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useEffect } from "react";
 import AOS from "aos";
+
+import Home from "./Home";
+import Confirmation from "./components/Confirmation";
 
 function App() {
   useEffect(() => {
@@ -18,30 +14,12 @@ function App() {
   }, []);
 
   return (
-    <>
-      <Header />
-        <Hero />
-        
-      <section id="services">
-        <Services />
-      </section>
-
-      <section id="tariff">
-        <Tariff />
-      </section>
-
-      <section id="book">
-        <BookingForm />
-      </section>
-
-      <section id="packages">
-        <Packages />
-      </section>
-
-      <section id="contact">
-        <Contact />
-      </section>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/confirm-booking" element={<Confirmation />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
