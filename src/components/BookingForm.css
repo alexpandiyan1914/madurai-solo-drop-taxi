@@ -1,154 +1,244 @@
-/* ===============================
-   BOOKING SECTION
-================================ */
+/* =====================================================
+   BOOKING SECTION – BASE
+===================================================== */
 
 .booking-section {
-  background: linear-gradient(
-    180deg,
-    #ffffff 0%,
-    #f7f7f7 100%
-  );
+  background: linear-gradient(180deg, #ffffff 0%, #f6f7f9 100%);
+  padding: 5rem 0;
   position: relative;
+  overflow: hidden;
 }
 
-/* ===============================
-   LEFT CONTENT (WHY CHOOSE US)
-================================ */
+/* Soft background accent */
+.booking-section::before {
+  content: "";
+  position: absolute;
+  top: -120px;
+  right: -120px;
+  width: 280px;
+  height: 280px;
+  background: radial-gradient(circle, rgba(255,193,7,0.18), transparent 70%);
+  z-index: 0;
+}
+
+/* =====================================================
+   LEFT CONTENT – WHY CHOOSE US
+===================================================== */
 
 .booking-section h2 {
-  font-size: 2.2rem;
-  line-height: 1.3;
+  font-size: 2.3rem;
+  font-weight: 700;
+  line-height: 1.35;
+  margin-bottom: 1.2rem;
 }
 
 .booking-section h2 span {
   color: #ffc107; /* Taxi Yellow */
 }
 
-.booking-section p {
-  font-size: 1rem;
-  color: #6c757d;
+.booking-section .why-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
 }
 
-.booking-section ul {
-  margin-top: 1.5rem;
-}
-
-.booking-section ul li {
+.booking-section .why-list li {
   background: #ffffff;
-  padding: 12px 16px;
-  border-radius: 10px;
-  margin-bottom: 12px;
+  padding: 14px 18px;
+  border-radius: 14px;
+  margin-bottom: 14px;
   font-weight: 500;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.06);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.booking-section ul li:hover {
+.booking-section .why-list li::before {
+  content: "✔";
+  color: #25d366;
+  font-weight: 700;
+}
+
+.booking-section .why-list li:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
 }
 
-/* ===============================
+/* =====================================================
    BOOKING CARD
-================================ */
+===================================================== */
 
-.booking-section .card {
-  border-radius: 18px;
+.booking-card {
+  border-radius: 22px;
   background: #ffffff;
+  padding: 2.5rem 2.2rem;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.08);
+  position: relative;
+  z-index: 1;
 }
 
-.booking-section .card h3 {
-  font-size: 1.8rem;
-  letter-spacing: 0.3px;
+.booking-card h3 {
+  font-size: 1.85rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
-/* ===============================
+/* =====================================================
    FORM CONTROLS
-================================ */
+===================================================== */
 
 .booking-section .form-label {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 600;
   color: #495057;
+  margin-bottom: 6px;
 }
 
 .booking-section .form-control,
 .booking-section .form-select {
-  border-radius: 10px;
-  padding: 12px 14px;
+  border-radius: 12px;
+  padding: 13px 15px;
   font-size: 0.95rem;
   border: 1px solid #dee2e6;
+  background-color: #ffffff;
   transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.booking-section .form-control::placeholder {
+  color: #adb5bd;
+  font-size: 0.9rem;
 }
 
 .booking-section .form-control:focus,
 .booking-section .form-select:focus {
   border-color: #ffc107;
-  box-shadow: 0 0 0 0.15rem rgba(255, 193, 7, 0.25);
+  box-shadow: 0 0 0 0.18rem rgba(255, 193, 7, 0.25);
 }
 
-/* ===============================
-   ESTIMATED FARE
-================================ */
+/* Validation */
+.booking-section .is-invalid {
+  border-color: #dc3545;
+}
 
-.booking-section .alert-warning {
-  background: linear-gradient(
-    90deg,
-    #fff3cd,
-    #ffe69c
-  );
-  border: none;
-  border-radius: 12px;
-  font-size: 1.05rem;
+.booking-section .text-danger {
+  font-size: 0.75rem;
+  margin-top: 4px;
+}
+
+/* =====================================================
+   ESTIMATED FARE / INFO BOX
+===================================================== */
+
+.booking-section .info-box {
+  background: linear-gradient(90deg, #fff3cd, #ffe69c);
+  border-radius: 14px;
+  padding: 14px 16px;
+  font-size: 0.95rem;
   color: #664d03;
+  margin-top: 1rem;
+  text-align: center;
+  font-weight: 500;
 }
 
-/* ===============================
-   BUTTON
-================================ */
+/* =====================================================
+   BUTTONS
+===================================================== */
 
-.booking-section .btn-success {
-  background: linear-gradient(
-    135deg,
-    #25d366,
-    #1ebe5d
-  );
+.booking-section .btn-primary {
+  background: linear-gradient(135deg, #ffc107, #ffb300);
   border: none;
+  border-radius: 14px;
   font-size: 1.05rem;
+  font-weight: 600;
+  padding: 14px;
+  margin-top: 1.5rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.booking-section .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(255, 193, 7, 0.45);
+}
+
+/* WhatsApp / Confirm button */
+.booking-section .btn-success {
+  background: linear-gradient(135deg, #25d366, #1ebe5d);
+  border: none;
+  border-radius: 14px;
+  font-size: 1.05rem;
+  font-weight: 600;
   padding: 14px;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .booking-section .btn-success:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.35);
+  box-shadow: 0 14px 30px rgba(37, 211, 102, 0.45);
 }
 
-/* ===============================
-   RESPONSIVE TWEAKS
-================================ */
+/* =====================================================
+   CONFIRMATION PAGE SUPPORT
+===================================================== */
+
+.confirmation-box {
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 2.5rem;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.1);
+}
+
+.confirmation-box h4 {
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.confirmation-list {
+  list-style: none;
+  padding: 0;
+}
+
+.confirmation-list li {
+  padding: 10px 0;
+  font-size: 0.95rem;
+  border-bottom: 1px dashed #dee2e6;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
 
 @media (max-width: 991px) {
-  .booking-section h2 {
-    font-size: 1.9rem;
+  .booking-section {
+    padding: 4rem 0;
   }
 
-  .booking-section ul li {
-    font-size: 0.95rem;
+  .booking-section h2 {
+    font-size: 2rem;
+  }
+
+  .booking-card {
+    padding: 2.2rem 1.8rem;
   }
 }
 
 @media (max-width: 576px) {
   .booking-section {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding: 3rem 0;
   }
 
-  .booking-section .card-body {
+  .booking-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .booking-card {
     padding: 2rem 1.5rem;
   }
 
-  .booking-section h3 {
+  .booking-card h3 {
     font-size: 1.6rem;
   }
 }
