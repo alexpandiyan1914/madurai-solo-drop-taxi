@@ -4,6 +4,25 @@
   color: #fff;
 }
 
+.back-btn{
+  border: none;
+  background-color: #ffc400;
+  color: black;
+  width: 75px;
+  margin-top: 12px;
+  font-weight: bold;
+  font-family: 'Inter', sans-serif;
+  border-radius: 25px;
+  font-size: small;
+  transition: 0.3s ease;
+}
+.back-btn:hover{
+  color: #ffc400 !important;
+  background-color: #111 !important;
+  border: 1px solid #ffc400;
+  transform: translateY(-2px);
+}
+
 .confirm-left {
   padding: 3rem 2rem;
 }

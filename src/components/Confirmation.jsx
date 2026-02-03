@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Confirmation.css";
 import logo from "../assets/logo.png";
@@ -6,6 +7,7 @@ import logo from "../assets/logo.png";
 function Confirmation() {
   const data = JSON.parse(localStorage.getItem("bookingData"));
   const [accepted, setAccepted] = useState(false);
+  const navigate = useNavigate();
 
   if (!data) {
     return (
@@ -37,14 +39,17 @@ Estimated Fare: ₹${data.fare || "To be discussed"}
     localStorage.removeItem("bookingData");
   };
 
+  const handleBack = () => {
+      navigate("/");
+  }
   return (
-    <section className="confirm-section">
+    <section className="confirm-section">   
       <div className="container h-100">
+        <button className="back-btn" onClick={handleBack}>Go Back</button>
         <div className="row h-100 align-items-center">
-
           {/* LEFT – BRAND & TERMS */}
           <div className="col-lg-5 confirm-left">
-            <div className="brand-box">
+            <div className="brand-box"> 
               <img src={logo} alt="Madurai Solo Drop Taxi" />
               <h2>Welcome to<br />Madurai Solo Drop Taxi</h2>
               <p className="subtitle">
