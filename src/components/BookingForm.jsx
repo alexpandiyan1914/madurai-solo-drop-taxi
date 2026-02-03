@@ -135,7 +135,7 @@ function BookingForm() {
           {/* FORM */}
           <div className="col-lg-6" data-aos="fade-left">
             <div className="card booking-card">
-              <h3 className="text-center mb-4">Book Your Taxi</h3
+              <h3 className="text-center mb-4">Book Your Taxi</h3>
               <div className="row g-3">
                 <Input label="Name" name="name" value={form.name} error={errors.name} onChange={handleChange} />
                 <Input label="Phone" name="phone" value={form.phone} error={errors.phone} onChange={handleChange} />
