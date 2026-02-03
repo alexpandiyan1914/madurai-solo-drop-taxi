@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Confirmation.css";
 import logo from "../assets/logo.png";
+import emailjs from "@emailjs/browser";
 
 function Confirmation() {
   const data = JSON.parse(localStorage.getItem("bookingData"));
@@ -31,6 +32,33 @@ Distance: ${data.distance || "To be discussed"}
 Estimated Fare: ₹${data.fare || "To be discussed"}
 `;
 
+    const templateParams = {
+      name: data.name,
+      phone: data.phone,
+      pickup: data.pickup,
+      drop: data.drop,
+      date: data.date,
+      time: data.time,
+      car: data.car.toUpperCase(),
+      distance: data.distance || "To be discussed",
+      fare: data.fare || "To be discussed",
+    };
+
+    emailjs
+      .send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        templateParams,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      )
+      .then(() => {
+        console.log("Email sent successfully");
+      })
+      .catch((error) => {
+        console.error("Email sending failed:", error);
+      });
+
+
     window.open(
       `https://wa.me/918122746320?text=${encodeURIComponent(msg)}`,
       "_blank"
@@ -40,16 +68,16 @@ Estimated Fare: ₹${data.fare || "To be discussed"}
   };
 
   const handleBack = () => {
-      navigate("/");
+    navigate("/");
   }
   return (
-    <section className="confirm-section">   
+    <section className="confirm-section">
       <div className="container h-100">
         <button className="back-btn" onClick={handleBack}>Go Back</button>
         <div className="row h-100 align-items-center">
           {/* LEFT – BRAND & TERMS */}
           <div className="col-lg-5 confirm-left">
-            <div className="brand-box"> 
+            <div className="brand-box">
               <img src={logo} alt="Madurai Solo Drop Taxi" />
               <h2>Welcome to<br />Madurai Solo Drop Taxi</h2>
               <p className="subtitle">
