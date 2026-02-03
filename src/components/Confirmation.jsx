@@ -4,6 +4,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./Confirmation.css";
 import logo from "../assets/logo.png";
 import emailjs from "@emailjs/browser";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./Confirmation.css";
+import logo from "../assets/logo.png";
 
 function Confirmation() {
   const data = JSON.parse(localStorage.getItem("bookingData"));
@@ -57,7 +60,6 @@ Estimated Fare: ₹${data.fare || "To be discussed"}
       .catch((error) => {
         console.error("Email sending failed:", error);
       });
-
 
     window.open(
       `https://wa.me/918122746320?text=${encodeURIComponent(msg)}`,

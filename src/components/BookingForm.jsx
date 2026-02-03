@@ -78,10 +78,13 @@ function BookingForm() {
   const handleChange = (e) => {
     const { name, value } = e.target;
 
+    // Name → only letters & spaces
     if (name === "name" && !/^[a-zA-Z\s]*$/.test(value)) return;
 
+    // Phone → only numbers
     if (name === "phone" && !/^\d*$/.test(value)) return;
 
+    // Distance → no minus
     if (name === "distance" && value.startsWith("-")) return;
 
     setForm((prev) => ({ ...prev, [name]: value }));
@@ -132,10 +135,8 @@ function BookingForm() {
           {/* FORM */}
           <div className="col-lg-6" data-aos="fade-left">
             <div className="card booking-card">
-              <h3 className="text-center mb-4">Book Your Taxi</h3>
-
+              <h3 className="text-center mb-4">Book Your Taxi</h3
               <div className="row g-3">
-
                 <Input label="Name" name="name" value={form.name} error={errors.name} onChange={handleChange} />
                 <Input label="Phone" name="phone" value={form.phone} error={errors.phone} onChange={handleChange} />
                 <Input label="Pickup Location" name="pickup" value={form.pickup} error={errors.pickup} onChange={handleChange} />
@@ -153,9 +154,7 @@ function BookingForm() {
                   </select>
 
                 </div>
-
                 <Input label="Distance (optional)" name="distance" value={form.distance} error={errors.distance} onChange={handleChange} />
-
               </div>
 
               <button className="btn btn-primary w-100 mt-4" onClick={handleEnquiry} disabled={loading}>
@@ -168,7 +167,6 @@ function BookingForm() {
               </button>
             </div>
           </div>
-
         </div>
       </div>
     </section>
@@ -192,4 +190,3 @@ function Input({ label, name, value, error, onChange, type = "text" }) {
   );
 }
 
-export default BookingForm;
