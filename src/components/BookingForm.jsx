@@ -190,3 +190,4 @@ function Input({ label, name, value, error, onChange, type = "text" }) {
   );
 }
 
+export default BookingForm;

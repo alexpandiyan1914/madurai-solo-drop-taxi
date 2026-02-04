@@ -4,9 +4,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./Confirmation.css";
 import logo from "../assets/logo.png";
 import emailjs from "@emailjs/browser";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./Confirmation.css";
-import logo from "../assets/logo.png";
 
 function Confirmation() {
   const data = JSON.parse(localStorage.getItem("bookingData"));
