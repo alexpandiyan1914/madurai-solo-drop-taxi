@@ -161,3 +161,16 @@
     justify-content: center;
   }
 }
+
+.footer-link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.3s all;
+}
+
+.footer-link:hover {
+  color: #ffc107;
+}

@@ -5,8 +5,8 @@ import "./BookingForm.css";
 
 const RATES = {
   sedan: 14,
-  suv: 18,
-  innova: 20,
+  suv: 19,
+  innova: 19,
 };
 
 function BookingForm() {
@@ -127,8 +127,8 @@ function BookingForm() {
               <li className="mb-3" data-aos="fade-up" data-aos-delay="100">One-way & Outstation Trips</li>
               <li className="mb-3" data-aos="fade-up" data-aos-delay="200">No Hidden Charges</li>
               <li className="mb-3" data-aos="fade-up" data-aos-delay="300">Experienced Drivers</li>
-              <li className="mb-3" data-aos="fade-up" data-aos-delay="400">On-time Pickup</li>
-              <li className="mb-3" data-aos="fade-up" data-aos-delay="500">24×7 Support</li>
+              <li className="mb-3" data-aos="fade-up" data-aos-delay="300">On-time Pickup</li>
+              <li className="mb-3" data-aos="fade-up" data-aos-delay="400">24×7 Support</li>
             </ul>
           </div>
 

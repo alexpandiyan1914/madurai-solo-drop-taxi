@@ -1,56 +1,66 @@
 import "./Packages.css";
+import { useState } from "react";
+import PackageBookingModal from "./PackageBookingModal";
 
 const packages = [
   {
-    title: "Madurai → Kodaikanal",
-    days: "3 Days / 2 Nights",
-    distance: "≈ 240 km",
-    places: "Coaker’s Walk, Pillar Rocks, Kodai Lake",
-    price: "Starts from ₹7,999",
+    title: "Madurai → Rameswaram",
+    days: "Oneway Drop",
+    distance: "≈ 173 km",
+    places: "Pamban Bridge, Ramanathaswamy Temple",
+    note: "For further details please contact us.",
+    price: "Starts from ₹3,000",
   },
   {
-    title: "Madurai → Rameswaram",
-    days: "1–2 Days",
-    distance: "≈ 340 km",
-    places: "Pamban Bridge, Ramanathaswamy Temple",
-    price: "Starts from ₹6,499",
+    title: "Madurai → Trichy",
+    days: "Oneway Drop",
+    distance: "≈ 126",
+    places: "Trichy",
+    note: "For further details please contact us.",
+    price: "Starts from ₹2,400",
+    cost:"2400",
+  },
+  {
+    title: "Madurai → Kodaikanal",
+    days: "Oneway Drop",
+    distance: "≈ 118 km",
+    places: "For further details please contact us.",
+    note: "For further details please contact us.",
+    price: "Starts from ₹2520",
   },
   {
     title: "Madurai → Ooty",
-    days: "3 Days",
-    distance: "≈ 520 km",
+    days: "Oneway Drop",
+    distance: "≈ 286 km",
     places: "Botanical Garden, Ooty Lake",
-    price: "Starts from ₹10,999",
-  },
-  {
-    title: "Madurai → Kanyakumari",
-    days: "2 Days",
-    distance: "≈ 500 km",
-    places: "Vivekananda Rock, Sunset Point",
-    price: "Starts from ₹8,999",
+    note: "For further details please contact us.",
+    price: "Starts from ₹4,500",
   },
   {
     title: "Madurai → Munnar",
-    days: "3 Days",
-    distance: "≈ 280 km",
+    days: "Oneway Drop",
+    distance: "≈ 160 km",
     places: "Tea Gardens, Eravikulam Park",
-    price: "Starts from ₹9,499",
+    note: "For further details please contact us.",
+    price: "Starts from ₹3,500",
   },
   {
     title: "Madurai → Palani",
-    days: "1 Day",
-    distance: "≈ 120 km",
+    days: "Oneway Drop",
+    distance: "≈ 123 km",
     places: "Palani Murugan Temple",
-    price: "Starts from ₹3,499",
+    note: "For further details please contact us.",
+    price: "Starts from ₹2,400",
   },
 ];
 
 function Packages() {
+  const [selectedPackage, setSelectedPackage] = useState(null);
   return (
     <section className="packages-section">
       <div className="container">
         <div className="text-center mb-5">
-          <h2 className="section-title">Tour Packages</h2>
+          <h2 className="section-title">Packages</h2>
           <p className="section-subtitle">
             Easy booking • Pickup from Madurai • Comfortable rides
           </p>
@@ -72,20 +82,30 @@ function Packages() {
                   <strong>Distance:</strong> {pkg.distance}
                 </p>
                 <p className="package-info">
-                  <strong>Places:</strong> {pkg.places}
+                  <strong>Note:</strong> {pkg.note}
                 </p>
 
                 <div className="package-footer">
                   <span className="package-price">{pkg.price}</span>
-                  <a href="#book" className="btn btn-warning btn-sm">
+                  <button
+                    className="btn btn-warning btn-sm"
+                    onClick={() => setSelectedPackage(pkg)}
+                  >
                     Book Now
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
           ))}
         </div>
       </div>
+      {selectedPackage && (
+        <PackageBookingModal
+          pkg={selectedPackage}
+          onClose={() => setSelectedPackage(null)}
+        />
+      )}
+
     </section>
   );
 }

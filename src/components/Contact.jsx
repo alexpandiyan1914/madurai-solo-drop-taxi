@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./Contact.css";
 
 import logo from "../assets/logo.png";
-import { FaPhoneAlt, FaWhatsapp, FaEnvelope, FaClock, FaMapMarkerAlt } from "react-icons/fa";
+import { FaPhoneAlt, FaWhatsapp, FaEnvelope, FaClock, FaMapMarkerAlt, FaInstagram } from "react-icons/fa";
 
 function Contact() {
   const [visible, setVisible] = useState(false);
@@ -51,11 +51,51 @@ function Contact() {
           <div className="footer-col" data-aos="fade-up" data-aos-delay="200">
             <h5 className="footer-title">Contact</h5>
             <ul className="footer-list">
-              <li><FaPhoneAlt /> +91 81227 46320</li>
-              <li><FaWhatsapp /> WhatsApp Available</li>
-              <li><FaEnvelope /> maduraisolodroptaxi@gmail.com</li>
-              <li><FaClock /> 24 / 7 Service</li>
-              <li><FaMapMarkerAlt /> Madurai, Tamil Nadu</li>
+
+              <li>
+                <a href="tel:+919655518489" className="footer-link">
+                  <FaPhoneAlt /> +91 9655518489
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://wa.me/919655518403?text=Hi%20I%20would%20like%20to%20book%20a%20taxi%20from%20Madurai."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="footer-link"
+                >
+                  <FaWhatsapp /> WhatsApp Available
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://www.instagram.com/madurai_solo_drop_taxi?igsh=MXBneGR0YnlzdTFkZg=="
+                  target="_blank"
+                  className="footer-link"
+                >
+                  <FaInstagram /> Instagram
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="mailto:maduraisolodroptaxi@gmail.com"
+                  className="footer-link"
+                >
+                  <FaEnvelope /> maduraisolodroptaxi@gmail.com
+                </a>
+              </li>
+
+              <li>
+                <FaClock /> 24 / 7 Service
+              </li>
+
+              <li>
+                <FaMapMarkerAlt /> Madurai, Tamil Nadu
+              </li>
+
             </ul>
           </div>
 
@@ -77,16 +117,12 @@ function Contact() {
             <div className="map-wrapper">
               <iframe
                 title="Madurai Solo Drop Taxi Location"
-                src="https://www.google.com/maps?q=Madurai,Tamil%20Nadu&output=embed"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3930.5599070332596!2d78.09269407479198!3d9.887239990212516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00cfaa81328677%3A0x896829f9e682d3b0!2sMadurai%20Solo%20Drop%20Taxi!5e0!3m2!1sen!2sin!4v1770565215813!5m2!1sen!2sin"
                 loading="lazy"
               ></iframe>
             </div>
           </div>
-
         </div>
-
-
-        <hr />
 
         <div className="footer-bottom">
           © {new Date().getFullYear()} Madurai Solo Drop Taxi · All rights reserved · Powered by Valyrian Coders

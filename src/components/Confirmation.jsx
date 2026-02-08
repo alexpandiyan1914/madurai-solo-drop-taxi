@@ -19,18 +19,30 @@ function Confirmation() {
   }
 
   const sendWhatsApp = () => {
-    const msg = `*Madurai Solo Drop Taxi Booking*
+    const msg = `Madurai Solo Drop Taxi - Booking Request
 
-Name: ${data.name}
-Phone: ${data.phone}
-From: ${data.pickup}
-To: ${data.drop}
-Date: ${data.date}
-Time: ${data.time}
-Vehicle: ${data.car.toUpperCase()}
-Distance: ${data.distance || "To be discussed"}
-Estimated Fare: ₹${data.fare || "To be discussed"}
-`;
+    Customer Details
+    ----------------
+    Name: ${data.name}
+    Phone: ${data.phone}
+
+    Trip Details
+    ------------
+    From: ${data.pickup}
+    To: ${data.drop}
+    Date: ${data.date}
+    Time: ${data.time}
+
+    Vehicle: ${data.car.toUpperCase()}
+
+    Estimated Fare: ₹${data.fare || "To be discussed"}
+
+    Thank you for choosing Madurai Solo Drop Taxi.
+
+    After your ride, we would appreciate your feedback:
+    https://g.page/r/CbDTgub5KWiJEAE/review`;
+
+
 
     const templateParams = {
       name: data.name,
@@ -59,7 +71,7 @@ Estimated Fare: ₹${data.fare || "To be discussed"}
       });
 
     window.open(
-      `https://wa.me/918122746320?text=${encodeURIComponent(msg)}`,
+      `https://wa.me/919655518489?text=${encodeURIComponent(msg)}`,
       "_blank"
     );
 
@@ -87,9 +99,9 @@ Estimated Fare: ₹${data.fare || "To be discussed"}
             <div className="terms-box">
               <h5>Terms & Conditions</h5>
               <ul>
-                <li>Toll, parking & permits are extra</li>
-                <li>Minimum 130 km per drop trip</li>
-                <li>Waiting charges ₹120/hour</li>
+                <li>Toll Fees, Inter-State Permit charges, Parking charges (if any) are extra.</li>
+                <li>Round Trips - Please Book Minimum 2 hrs before, Drop Trips - Please Book Minimum 3 hrs before.</li>
+                <li>1 day means 1 Calender day (from midnight 12 to Next Midnight 12)</li>
                 <li>Fare may change for hill stations</li>
                 <li>Booking subject to availability</li>
               </ul>
@@ -139,7 +151,7 @@ Estimated Fare: ₹${data.fare || "To be discussed"}
                 disabled={!accepted}
                 onClick={sendWhatsApp}
               >
-                Confirm Booking via WhatsApp
+                Confirm Your Booking
               </button>
             </div>
           </div>

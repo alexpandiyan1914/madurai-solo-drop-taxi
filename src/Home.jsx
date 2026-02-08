@@ -5,6 +5,8 @@ import Tariff from "./components/Tariff";
 import Contact from "./components/Contact";
 import Packages from "./components/Packages"
 import Hero from "./components/Hero"
+import Reviews from "./components/Reviews";
+
 
 import { useEffect } from "react";
 
@@ -37,6 +39,10 @@ function App() {
 
       <section id="packages">
         <Packages />
+      </section>
+
+      <section id="reviews">
+        <Reviews />
       </section>
 
       <section id="contact">

@@ -31,8 +31,8 @@ const Hero = () => {
               <a href="#book" className="btn btn-warning btn-lg me-3">
                 Book Now
               </a>
-              <a href="#contact" className="btn btn-outline-light btn-lg">
-                Contact Us
+              <a href="tel:+919655518489" className="btn btn-outline-light btn-lg">
+                Call Now
               </a>
             </div>
           </div>

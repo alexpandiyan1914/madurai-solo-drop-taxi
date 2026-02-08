@@ -19,7 +19,7 @@ const tariffData = [
   {
     id: "suv",
     vehicle: "SUV",
-    price: "₹18 / km",
+    price: "₹19 / km",
     image: suvImg,
     highlights: ["Good for 1-5 passengers", "AC: Yes", "Luggage: 2 large + 2 small"],
     description:
@@ -28,7 +28,7 @@ const tariffData = [
   {
     id: "innova",
     vehicle: "Innova",
-    price: "₹20 / km",
+    price: "₹19 / km",
     image: innovaImg,
     highlights: ["Good for 1-7 passengers", "AC: Yes", "Luggage: 3 large + 2 small"],
     description:
@@ -86,7 +86,7 @@ const Tariff = () => {
             Tariff
           </h2>
           <p className="section-subtitle">
-            Transparent pricing. Hover (desktop) or tap (mobile) a card to see details.
+            Transparent pricing • Comfortable journeys • Trusted service
           </p>
         </div>
 
@@ -167,9 +167,9 @@ const Tariff = () => {
 
                 <tr>
                   <td className="row-title">Round Way Trip</td>
-                  <td>₹13 / Km</td>
-                  <td>₹18 / Km</td>
-                  <td>₹18 / Km</td>
+                  <td>₹14 / Km</td>
+                  <td>₹19 / Km</td>
+                  <td>₹19 / Km</td>
                 </tr>
 
                 <tr>
