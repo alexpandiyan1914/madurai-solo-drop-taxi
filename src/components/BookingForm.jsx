@@ -161,7 +161,7 @@ function BookingForm() {
                 {loading ?(
                   <ThreeDot color="#fff" size="medium" text="" textColor="" />
                  ) :(
-                      "Get free Enguiry"
+                      "Get free Enquiry"
                   )
                 }
               </button>

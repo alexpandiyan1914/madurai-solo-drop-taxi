@@ -7,7 +7,7 @@ function Reviews() {
         Customer Reviews
       </h2>
 
-      <div class="elfsight-app-42755aaf-9a10-4d44-bf2f-4619df7cb473" data-elfsight-app-lazy></div>
+      <div className="elfsight-app-42755aaf-9a10-4d44-bf2f-4619df7cb473" data-elfsight-app-lazy></div>
 
     </section>
   );

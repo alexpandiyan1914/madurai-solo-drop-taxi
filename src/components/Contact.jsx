@@ -124,8 +124,8 @@ function Contact() {
           </div>
         </div>
 
-        <div className="footer-bottom">
-          © {new Date().getFullYear()} Madurai Solo Drop Taxi · All rights reserved · Powered by Valyrian Coders
+        <div className="footer-bottom" data-aos="fade-up">
+          © {new Date().getFullYear()} Madurai Solo Drop Taxi · All rights reserved · Powered by <a href="https://valyrian-coders.vercel.app/" target="_blank">Valyrian Coders</a>
         </div>
       </div>
     </footer>
