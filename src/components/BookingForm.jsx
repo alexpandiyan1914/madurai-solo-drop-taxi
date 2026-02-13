@@ -118,7 +118,7 @@ function BookingForm() {
         <div className="row g-5 align-items-center">
 
           {/* LEFT */}
-          <div className="col-lg-5" data-aos="fade-right">
+          <div className="col-lg-5" data-aos="fade-up">
             <h2 className="fw-bold mb-4">
               Why Choose <span className="text-warning">Madurai Solo Drop Taxi?</span>
             </h2>
@@ -127,8 +127,8 @@ function BookingForm() {
               <li className="mb-3" data-aos="fade-up" data-aos-delay="100">One-way & Outstation Trips</li>
               <li className="mb-3" data-aos="fade-up" data-aos-delay="200">No Hidden Charges</li>
               <li className="mb-3" data-aos="fade-up" data-aos-delay="300">Experienced Drivers</li>
-              <li className="mb-3" data-aos="fade-up" data-aos-delay="300">On-time Pickup</li>
-              <li className="mb-3" data-aos="fade-up" data-aos-delay="400">24×7 Support</li>
+              <li className="mb-3" data-aos="fade-up" data-aos-delay="400">On-time Pickup</li>
+              <li className="mb-3" data-aos="fade-up" data-aos-delay="500">24×7 Support</li>
             </ul>
           </div>
 
