@@ -71,7 +71,7 @@ function Contact() {
 
               <li>
                 <a
-                  href="https://www.instagram.com/madurai_solo_drop_taxi?igsh=MXBneGR0YnlzdTFkZg=="
+                  href="https://www.instagram.com/madurai_solo_drop_taxi/"
                   target="_blank"
                   className="footer-link"
                 >
@@ -124,7 +124,7 @@ function Contact() {
           </div>
         </div>
 
-        <div className="footer-bottom" data-aos="fade-up">
+        <div className="footer-bottom">
           © {new Date().getFullYear()} Madurai Solo Drop Taxi · All rights reserved · Powered by <a href="https://valyrian-coders.vercel.app/" target="_blank">Valyrian Coders</a>
         </div>
       </div>
