@@ -10,7 +10,7 @@ const tariffData = [
   {
     id: "sedan",
     vehicle: "Sedan",
-    price: "₹14 / km",
+    price: "₹15 / km",
     image: sedanImg,
     highlights: ["Good for 1-3 passengers", "AC: Yes", "Luggage: 1 large + 1 small"],
     description:
@@ -160,14 +160,14 @@ const Tariff = () => {
               <tbody>
                 <tr>
                   <td className="row-title">One Way Drop</td>
-                  <td>₹14 / Km</td>
+                  <td>₹15 / Km</td>
                   <td>₹19 / Km</td>
                   <td>₹19 / Km</td>
                 </tr>
 
                 <tr>
                   <td className="row-title">Round Way Trip</td>
-                  <td>₹14 / Km</td>
+                  <td>₹15 / Km</td>
                   <td>₹19 / Km</td>
                   <td>₹19 / Km</td>
                 </tr>
