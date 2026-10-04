@@ -4,7 +4,7 @@ import { ThreeDot } from "react-loading-indicators";
 import "./BookingForm.css";
 
 const RATES = {
-  sedan: 14,
+  sedan: 15,
   suv: 19,
   innova: 19,
 };
